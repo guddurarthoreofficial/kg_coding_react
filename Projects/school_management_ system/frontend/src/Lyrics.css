@@ -1,0 +1,66 @@
+body {
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: white;
+  font-family: "Courier New", monospace;
+}
+
+.lyrics-container {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.song-title {
+  font-size: 2.6rem;
+  color: #ff4d6d;
+  text-shadow: 0 0 15px #ff4d6d;
+  animation: glow 2s infinite alternate;
+}
+
+.artist {
+  color: #cbd5f5;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.lyrics-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid #ff4d6d;
+  border-radius: 14px;
+  padding: 25px;
+  max-width: 900px;
+  margin: auto;
+  box-shadow: 0 0 30px rgba(255, 77, 109, 0.5);
+}
+
+.typing-text {
+  font-size: 1.2rem;
+  line-height: 1.9;
+  white-space: pre-wrap;
+  text-align: left;
+  position: relative;
+  padding-right: 10px;
+}
+
+/* Glowing title */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #ff4d6d;
+  }
+  to {
+    text-shadow: 0 0 25px #ff4d6d;
+  }
+}
+
+/* Typing cursor */
+.typing-text::after {
+  content: "|";
+  position: absolute;
+  right: 0;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
